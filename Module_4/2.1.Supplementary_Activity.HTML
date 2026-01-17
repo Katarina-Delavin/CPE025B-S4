@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Ecclesiastical School</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1f4fd8;
+            --secondary: #f4b400;
+            --light: #f9f9f9;
+            --dark: #1a1a1a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        header {
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url(https://files.lamparaschool.ph/lampara/sms/school_site/background/ac6cdc-CES_NEW_BUILDING.jpg) center/cover no-repeat;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 8px;
+        }
+
+        nav {
+            background-color: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 16px 20px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(248, 238, 238, 0.063);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 50px 30px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(168, 155, 155, 0.489);
+        }
+
+        .section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+
+        .column img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .section p {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .column h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        li {
+            background-color: #f0f4ff;
+            margin-bottom: 12px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .date {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .clickable {
+            color: var(--primary);
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .clickable:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Christian Ecclesiastical School</h1>
+    <p>Dedicated to fostering academic excellence, spiritual growth, and lifelong learning.</p>
+    <p>Gaya-gaya, San Jose Del Monte City, Bulacan</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#programs">Programs</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <div class="two-column">
+            <div class="column">
+                <p>
+                    Christian Ecclesiastical School provides a nurturing environment where students
+                    grow academically, spiritually, and socially. We integrate Christian values
+                    with modern educational practices to prepare learners for meaningful lives.
+                </p>
+            </div>
+            <div class="column">
+                <img src="C:\Users\marky\Downloads\ces.jpg" alt="School Campus">
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="section">
+        <h2>Our Programs</h2>
+        <div class="two-column">
+            <div class="column">
+                <h3>Elementary Education</h3>
+                <p>
+                    Kindergarten to Grade 5 focusing on core academics and faith-based formation.
+                </p>
+            </div>
+            <div class="column">
+                <h3>Secondary Education</h3>
+                <p>
+                    Grades 6–12 offering advanced academics, theology, and STEM preparation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Field Trip <span class="date">May 25</span></li>
+            <li>Senior HighSchool Night<span class="date">May 30</span></li>
+            <li>Foundation Day <span class="date">June 19</span></li>
+            <li>Interschool Competitions <span class="date">June 29</span></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Gaya-gaya, San Jose Del Monte City, Bulacan</p>
+        <p>Email: <span class="clickable" onclick="showMessage()">info@christianecclesiasticalschool.com</span></p>
+        <p>Phone: (044) 913 7142</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Christian Ecclesiastical School. All rights reserved.</p>
+</footer>
+
+<script>
+    function showMessage() {
+        alert("Thank you for contacting Christian Ecclesiastical School!");
+    }
+</script>
+
+</body>
+</html>
