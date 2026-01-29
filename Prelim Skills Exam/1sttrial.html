@@ -2,7 +2,74 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <h1 for="title" id="title" style="color: rgb(255, 206, 229); font-weight: bold;">Survey Application</h1>
-        <p for="description" id="description" style="font-style: italic;">Ensure all details are correct</p>
+        <h1 for="title" id="title" style="color: rgb(179, 6, 78); font-weight: bold;">Survey Application for Students</h1>
+        <p for="description" id="description" style="font-style: italic;">Fill out every question</p>
    
     </head>
+
+    <h2>Survery for the improvement of the facilities in Technological Institute of the Philippines (T.I.P)</h2>
+    <form>
+
+     <body>
+        <h2>
+           Personal Information
+        </h2>
+        <form action="submit_survey" method="post" id="survey-form">
+
+        <!-- Userame -->
+            <label for="name-label" id="name-label" >Full name:</label>
+            <input type="text" id="name" placeholder="Satoru, Gojo D." required><br><br>
+
+            <!-- Email -->
+            <label for="email-label" id="email-label">T.I.P Email Address:</label>
+            <input type="email" id="email" placeholder="satorugojo143@gmail.com" required><br><br>
+
+            <!--Student Number-->
+            <label for="number-label" id="number-label">Student Number:</label>
+            <input type="number" id="number" placeholder="2376312" minlength="6" maxlength="6" required>
+            <br><br>
+
+             <!--Gender-->
+            <label for="gender-label" id="gender-label">Gender:</label>
+
+            <input type="radio" id="gender-label" value="Male">
+            <label for="male" id="male">Male</label>
+
+            <input type="radio" id="gender-label" value="Female" >
+            <label for="female" id="female">Female</label>
+
+            <input type="radio" id="gender-label" value="Prefer not to Say">
+            <label for="others" id="others">Prefer not to Say</label>
+            <br><br>
+
+            <!--Type of Account-->
+            <label for="type-label" id="type-label">Account Type:</label><br>
+            <select required>
+                <option for="new-label" id="new">New Student</option> 
+                <option for="new-label" id="new">Old student</option>
+                <option for="new-label" id="new">Transferee</option>
+            </select>
+            <br><br>
+
+            <!--Status-->
+            <label for="rel-label" id="rel-label">Things about T.I.P  that you want to have/achieve:</label><br>
+            <input type="checkbox" id="student" value="Student Hub">
+            <label for="Student Hub" id="Student Hub">Student Hub</label><br>
+            <input type="checkbox" id="More Variety of Food in Canteen" value="More Variety of Food in Canteen">
+            <label for="More Variety of Food in Canteen" id=More Variety of Food in Canteen">More Variety of Food in Canteen</label><br>
+            <input type="checkbox" id="New Design of Uniform" value="New Design of Uniform">
+            <label for="New Design of Uniform" id="New Design of Uniform">New Design of Uniform</label><br>     
+            <br><br>
+
+        <p for="description" id="description" style="font-style: Times New Roman;">Your Comment for further improvement</p>
+        <textarea rows="5" placeholder="Type Message"></textarea>
+        <input type="submit" value="Send Message">
+    </form>
+</section>
+
+<footer>
+    <p>Follow our School Social Media's</p>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+</footer>
+
