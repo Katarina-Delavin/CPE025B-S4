@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --bg-image: url("C:\Users\marky\Downloads\CPE025B-S4\CSS\CSS_Module_3\download (10).jpg"); 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffd1e6 0%, #dce3ef 100%), var(--bg-image) no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #430023 0%, #430023 100%);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+.hero {
+    background: linear-gradient(135deg, #ffbde2 0%, #fed6e3 100%);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("https://pin.it/75t06rZKC") no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #333;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin: 0 0 10px 0;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin: 0;
+    font-weight: 300;
+}
+
+.products {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category {
+    margin-bottom: 80px;
+}
+
+.category h3 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #2f0315;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+.category h3::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(135deg, #000000 0%, #000000 100%);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+    position: relative;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.product p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 1em;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #352128;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background: linear-gradient(135deg, #ffcee8 0%, #ffb3d2 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(135deg, #ffb7d7 0%, #ffb7d7 100%);
+    transform: scale(1.05);
+}
+
+footer {
+    background: linear-gradient(135deg, #430023 0%, #430023 100%);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.5em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .category h3 {
+        font-size: 2em;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+}
