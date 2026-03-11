@@ -1,0 +1,56 @@
+class Vehicle {
+    constructor(id, type) {
+        this.id = id;
+        this.type = type;
+        this.isDeployed = false;
+    }
+}
+
+class FleetManager {
+    constructor() {
+        this.vehicles = [];
+    }
+
+    addVehicle(vehicle) {
+        this.vehicles.push(vehicle);
+    }
+
+    deployVehicle(id) {
+        const vehicle = this.vehicles.find(v => v.id === id);
+
+        if (!vehicle) {
+            return undefined;
+        }
+
+        vehicle.isDeployed = true;
+        return vehicle;
+    }
+
+    getAvailableVehicles() {
+        return this.vehicles.filter(v => v.isDeployed === false);
+    }
+}
+
+console.log("Test Entity Instantiation");
+const testVehicle = new Vehicle("V01", "Truck");
+console.log(testVehicle);
+
+
+console.log("\n Test Composition and Insertion");
+const fleet = new FleetManager();
+fleet.addVehicle(testVehicle);
+fleet.addVehicle(new Vehicle("V02", "Van"));
+fleet.addVehicle(new Vehicle("V03", "Drone"));
+console.log(fleet.vehicles.length);
+
+console.log("\n Test State Mutation ");
+fleet.deployVehicle("V02");
+const deployedVehicle = fleet.vehicles.find(v => v.id === "V02");
+console.log(deployedVehicle.isDeployed);
+
+
+console.log("\n Test Data Filtering ");
+const available = fleet.getAvailableVehicles();
+console.log(available.length);
+
+console.log(available.map(v => v.id));
