@@ -7,12 +7,10 @@ class WeatherDashboard {
         this.#weatherData = new Map();
     }
 
-    // Requirement 2
     addCity(city) {
         this.#cities.add(city);
     }
 
-    // Requirement 3 & 4
     async syncData(fetchFunction) {
         const requests = [];
 
@@ -31,7 +29,6 @@ class WeatherDashboard {
         await Promise.all(requests);
     }
 
-    // Requirement 5
     getHottestCity() {
         if (this.#weatherData.size === 0) {
             return null;
